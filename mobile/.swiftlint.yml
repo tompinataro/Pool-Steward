@@ -1,0 +1,7 @@
+# SwiftLint configuration for the Pool Steward iOS app.
+excluded:
+  - ios/Pods
+  - ios/build
+included:
+  - ios
+reporter: "xcode"

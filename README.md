@@ -1,6 +1,6 @@
 # Pool Steward
 
-Pool Steward is a pool-maintenance-specific app built from the generic route-maintenance pattern.
+Pool Steward is a pool-maintenance-specific app built from the generic Route-Meister parent app.
 
 # Developer Guide
 

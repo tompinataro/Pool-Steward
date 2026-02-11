@@ -23,6 +23,12 @@
       "image": "./assets/palms_splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#FFFFFF"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "bfa5fe95-8256-469a-867c-3c6badd0360b"
+      }
+    },
+    "owner": "pinataro"
   }
 }

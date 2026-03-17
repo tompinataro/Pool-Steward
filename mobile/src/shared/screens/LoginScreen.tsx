@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, StyleSheet, ActivityIndicator, KeyboardAvoidingView, Platform, ScrollView, useWindowDimensions } from 'react-native';
+import { View, Text, TextInput, StyleSheet, ActivityIndicator, KeyboardAvoidingView, Platform, ScrollView, useWindowDimensions, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigationTypes';
@@ -22,8 +22,8 @@ export default function LoginFormScreen(_props: Props) {
   const paddingTop = isShort ? spacing(8) : spacing(12);
   const paddingBottom = isShort ? spacing(8) : spacing(10);
   const paddingHorizontal = isShort ? spacing(4) : spacing(6);
-  const [email, setEmail] = useState('tom@pinataro.com');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('demouser@example.com');
+  const [password, setPassword] = useState('password');
   const [initialOdometer, setInitialOdometer] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -110,6 +110,12 @@ export default function LoginFormScreen(_props: Props) {
             )}
           </View>
           <View style={[styles.logoFrame, { width: logoSize, height: logoSize }]}>
+            <Image
+              source={require('../../../assets/icon.png')}
+              style={{ width: Math.round(logoSize * 0.62), height: Math.round(logoSize * 0.62) }}
+              resizeMode="contain"
+              accessibilityLabel="Pool Steward logo"
+            />
             <Text style={styles.logoText}>Pool Steward</Text>
           </View>
         </ScrollView>

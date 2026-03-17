@@ -24,7 +24,8 @@ export const SMTP_SECURE = process.env.SMTP_SECURE === 'true' || (SMTP_PORT === 
 export const REPORT_TIMEZONE = process.env.REPORT_TIMEZONE || 'America/Chicago';
 
 export function getDemoEmail() {
-  return (process.env.DEMO_EMAIL || 'demo@example.com').toLowerCase();
+  // Default demo login for quick test flows (can be overridden via DEMO_EMAIL).
+  return (process.env.DEMO_EMAIL || 'demouser@example.com').toLowerCase();
 }
 
 export function getDemoPassword() {

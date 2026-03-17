@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, ScrollView, useWindowDimensions, TextInput, ActivityIndicator, KeyboardAvoidingView, Platform } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, useWindowDimensions, TextInput, ActivityIndicator, KeyboardAvoidingView, Platform, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useAuth } from '../auth/provider';
@@ -16,8 +16,8 @@ export default function LoginLandingScreen() {
   const logoSize = Math.min(contentWidth, Math.round(height * (isShort ? 0.34 : 0.4)));
   const verticalPad = isShort ? spacing(4) : spacing(6);
   const gap = isShort ? spacing(2) : spacing(3);
-  const [email, setEmail] = useState('tom@pinataro.com');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('demouser@example.com');
+  const [password, setPassword] = useState('password');
   const [initialOdometer, setInitialOdometer] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -53,6 +53,12 @@ export default function LoginLandingScreen() {
         >
           <View style={[styles.content, { maxWidth: contentWidth }]}>
             <View style={[styles.logoFrame, { width: logoSize, height: logoSize }]}>
+              <Image
+                source={require('../../../assets/icon.png')}
+                style={{ width: Math.round(logoSize * 0.62), height: Math.round(logoSize * 0.62) }}
+                resizeMode="contain"
+                accessibilityLabel="Pool Steward logo"
+              />
               <Text style={styles.logoText}>Pool Steward</Text>
               <Text style={styles.rightsText}>All Rights Reserved. ©️ 2026</Text>
             </View>

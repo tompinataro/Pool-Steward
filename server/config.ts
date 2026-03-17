@@ -25,7 +25,7 @@ export const REPORT_TIMEZONE = process.env.REPORT_TIMEZONE || 'America/Chicago';
 
 export function getDemoEmail() {
   // Default demo login for quick test flows (can be overridden via DEMO_EMAIL).
-  return (process.env.DEMO_EMAIL || 'demouser@example.com').toLowerCase();
+  return (process.env.DEMO_EMAIL || 'demo@example.com').toLowerCase();
 }
 
 export function getDemoPassword() {

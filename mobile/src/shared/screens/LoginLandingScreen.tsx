@@ -111,7 +111,11 @@ export default function LoginLandingScreen() {
             ) : (
               <ThemedButton
                 title="Log In"
-                onPress={onSubmit}
+                onPress={() => {
+                  // Immediate UI feedback to confirm the tap is being received.
+                  showBanner({ type: 'info', message: 'Attempting login…' });
+                  void onSubmit();
+                }}
                 style={styles.halfWidthBtn}
               />
             )}

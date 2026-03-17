@@ -106,7 +106,15 @@ export default function LoginFormScreen(_props: Props) {
             {loading ? (
               <ActivityIndicator />
             ) : (
-              <ThemedButton title="Log In" onPress={onSubmit} style={styles.fullWidthBtn} />
+              <ThemedButton
+                title="Log In"
+                onPress={() => {
+                  // Immediate UI feedback to confirm the tap is being received.
+                  showBanner({ type: 'info', message: 'Attempting login…' });
+                  void onSubmit();
+                }}
+                style={styles.fullWidthBtn}
+              />
             )}
           </View>
           <View style={[styles.logoFrame, { width: logoSize, height: logoSize }]}>

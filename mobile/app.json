@@ -2,27 +2,32 @@
   "expo": {
     "name": "Pool Steward",
     "slug": "pool-steward",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "assetBundlePatterns": [
       "assets/*"
     ],
     "runtimeVersion": "1.0.0",
     "updates": {},
     "ios": {
-      "bundleIdentifier": "com.tixpy.poolsteward"
+      "bundleIdentifier": "com.tixpy.poolsteward",
+      "buildNumber": "3"
     },
     "android": {
       "package": "com.tixpy.poolsteward",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
+        "backgroundColor": "#0f5566"
+      },
+      "versionCode": 17
     },
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/palms_splash.png",
+      "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#FFFFFF"
+      "backgroundColor": "#0f5566"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
     },
     "extra": {
       "eas": {

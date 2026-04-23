@@ -4,6 +4,12 @@ export type TodayRoute = { id: number; clientName: string; address: string; sche
 export type ChecklistItem = { key: string; label: string; done: boolean };
 export type Visit = { id: number; clientName: string; checklist: ChecklistItem[]; timelyNote?: string | null; address?: string | null; checkInTs?: string | null };
 
+const CHECKLIST_LABELS: Record<string, string> = {
+  watered: 'Skim Pool - Clear Debris',
+  pruned: 'Clean Filter',
+  replaced: 'Test - Adjust Water Chemistry',
+};
+
 const FALLBACK_ROUTES: TodayRoute[] = [
   { id: 104, clientName: 'Club 9625', address: '1919 Coon Rapids Blvd NW, Coon Rapids, MN 55433', scheduledTime: '12:30' },
   { id: 105, clientName: 'Palm Vista', address: '910 Sago Palm Way, Apollo Beach, FL 33572', scheduledTime: '14:00' },
@@ -14,9 +20,9 @@ const FALLBACK_ROUTES: TodayRoute[] = [
 ];
 const DEFAULT_TIME_SLOTS = ['08:00', '09:15', '10:30', '11:45', '13:00', '14:15', '15:30'];
 const DEFAULT_CHECKLIST: ChecklistItem[] = [
-  { key: 'watered', label: 'Watered Plants', done: false },
-  { key: 'pruned', label: 'Pruned and cleaned', done: false },
-  { key: 'replaced', label: 'Replaced unhealthy plants', done: false },
+  { key: 'watered', label: CHECKLIST_LABELS.watered, done: false },
+  { key: 'pruned', label: CHECKLIST_LABELS.pruned, done: false },
+  { key: 'replaced', label: CHECKLIST_LABELS.replaced, done: false },
 ];
 
 function fallbackTimeFor(order: number) {
@@ -204,7 +210,10 @@ export async function getVisit(id: number): Promise<Visit> {
       return {
         id,
         clientName: visit.rows[0].client_name,
-        checklist: items?.rows ?? [],
+        checklist: (items?.rows ?? []).map((item) => ({
+          ...item,
+          label: CHECKLIST_LABELS[item.key] ?? item.label,
+        })),
         timelyNote: visit.rows[0].timely_note,
         address: visit.rows[0].address,
         checkInTs: null,
@@ -222,9 +231,9 @@ export async function getVisit(id: number): Promise<Visit> {
     id,
     clientName,
     checklist: [
-      { key: 'watered', label: 'Watered Plants', done: false },
-      { key: 'pruned', label: 'Pruned and cleaned', done: false },
-      { key: 'replaced', label: 'Replaced unhealthy plants', done: false }
+      { key: 'watered', label: CHECKLIST_LABELS.watered, done: false },
+      { key: 'pruned', label: CHECKLIST_LABELS.pruned, done: false },
+      { key: 'replaced', label: CHECKLIST_LABELS.replaced, done: false }
     ],
     timelyNote: null,
     checkInTs: null

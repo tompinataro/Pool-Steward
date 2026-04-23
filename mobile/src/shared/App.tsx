@@ -117,7 +117,7 @@ function RootNavigator() {
   const { token, loading, user } = useAuth();
   if (loading) {
     return (
-      <View style={{ flex: 1, backgroundColor: '#e7bfbf', alignItems: 'center', justifyContent: 'center' }}>
+      <View style={{ flex: 1, backgroundColor: colors.background, alignItems: 'center', justifyContent: 'center' }}>
         <ActivityIndicator size="large" color={colors.primary} />
       </View>
     );

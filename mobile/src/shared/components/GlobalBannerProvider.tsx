@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
   safeTop: { position: 'absolute', top: 0, left: 0, right: 0, zIndex: 1000 },
   banner: { left: 0, right: 0, paddingVertical: spacing(2), paddingHorizontal: spacing(4), borderBottomWidth: 1 },
   text: { textAlign: 'center', fontWeight: '600' },
-  info: { backgroundColor: '#eef2ff', borderColor: '#c7d2fe' },
-  success: { backgroundColor: colors.successBg, borderColor: '#86efac' },
+  info: { backgroundColor: '#E0F2FE', borderColor: '#7DD3FC' },
+  success: { backgroundColor: colors.successBg, borderColor: '#7DD3FC' },
   error: { backgroundColor: '#fee2e2', borderColor: '#fecaca' },
 });

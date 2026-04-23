@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     marginBottom: spacing(3),
   },
   text: { color: colors.text },
-  info: { backgroundColor: '#eef2ff', borderColor: '#c7d2fe' },
-  success: { backgroundColor: colors.successBg, borderColor: '#86efac' },
+  info: { backgroundColor: '#E0F2FE', borderColor: '#7DD3FC' },
+  success: { backgroundColor: colors.successBg, borderColor: '#7DD3FC' },
   error: { backgroundColor: '#fee2e2', borderColor: '#fecaca' },
 });

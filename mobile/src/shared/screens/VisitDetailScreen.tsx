@@ -102,6 +102,7 @@ export default function VisitDetailScreen({ route, navigation }: Props) {
             />
             <Text style={styles.timeText}>{checkInTs ? formatTime(checkInTs) : '--'}</Text>
           </View>
+          <Text style={styles.sectionTitle}>Service Checklist</Text>
           <View style={styles.checklistCard}>
             {visit.checklist.map((item, idx) => (
               <TouchableOpacity
@@ -233,7 +234,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingHorizontal: 2,
   },
-  switchTrackOn: { backgroundColor: colors.primary },
+  switchTrackOn: { backgroundColor: '#38BDF8' },
   switchThumb: {
     width: 14,
     height: 14,

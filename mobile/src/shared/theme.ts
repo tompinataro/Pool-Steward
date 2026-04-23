@@ -1,14 +1,14 @@
 export const colors = {
-  // American flag-inspired palette (Old Glory)
-  primary: '#3C3B6E', // flag blue
-  background: '#FFFFFF',
+  // Clear-water palette for Pool Steward
+  primary: '#0F5F78',
+  background: '#F3FBFF',
   card: '#FFFFFF',
-  text: '#111827',
-  muted: '#4B5563',
-  border: '#D1D5DB',
-  successBg: '#EEF2FF',
-  successText: '#3C3B6E',
-  danger: '#B22234', // flag red
+  text: '#0B2540',
+  muted: '#52738A',
+  border: '#B7D4E5',
+  successBg: '#DFF4FF',
+  successText: '#0F5F78',
+  danger: '#B91C1C',
 };
 
 export const spacing = (n: number) => n * 4;

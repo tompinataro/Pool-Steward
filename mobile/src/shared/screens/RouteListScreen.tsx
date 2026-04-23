@@ -265,7 +265,7 @@ const styles = StyleSheet.create({
   mapBtnArrow: { color: colors.primary, fontWeight: '900', fontSize: 28, marginTop: -2 },
   checkBadge: { width: 36, height: 36, borderRadius: 18, borderWidth: 2, borderColor: colors.muted, alignItems: 'center', justifyContent: 'center', marginRight: 0 },
   checkBadgeDone: { borderColor: colors.muted, backgroundColor: '#fff' },
-  checkBadgeInProgress: { backgroundColor: '#fee2e2', borderColor: '#fecaca' },
+  checkBadgeInProgress: { backgroundColor: '#E0F2FE', borderColor: '#7DD3FC' },
   checkMark: { color: colors.muted, fontSize: 22, fontWeight: '900' },
   checkMarkDone: { color: colors.primary },
   emptyWrap: { flex: 1, alignItems: 'center', justifyContent: 'center', paddingVertical: spacing(20) },

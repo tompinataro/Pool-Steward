@@ -10,7 +10,7 @@
     "updates": {},
     "ios": {
       "bundleIdentifier": "com.tixpy.poolsteward",
-      "buildNumber": "4"
+      "buildNumber": "5"
     },
     "android": {
       "package": "com.tixpy.poolsteward",
@@ -18,7 +18,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#0f5566"
       },
-      "versionCode": 18
+      "versionCode": 19
     },
     "icon": "./assets/icon.png",
     "splash": {

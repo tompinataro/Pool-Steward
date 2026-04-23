@@ -1,0 +1,9 @@
+.git
+.gitignore
+.expo
+artifacts
+assets/_icon_backup_20260317-114357
+mobile/assets/_icon_backup_20260317-114357
+control
+Deployments.md
+*.log

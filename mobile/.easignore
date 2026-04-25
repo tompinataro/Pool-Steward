@@ -8,4 +8,6 @@ control
 Deployments.md
 *.log
 android/build
+android/app/build
+android/app/.cxx
 ios/build

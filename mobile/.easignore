@@ -1,4 +1,7 @@
 .expo
+node_modules
+ios/Pods
+android/.gradle
 artifacts
 assets/_icon_backup_20260317-114357
 control

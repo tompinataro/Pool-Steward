@@ -1,9 +1,16 @@
 .git
 .gitignore
 .expo
+node_modules
 artifacts
 assets/_icon_backup_20260317-114357
 mobile/assets/_icon_backup_20260317-114357
+mobile/node_modules
+mobile/ios/Pods
+mobile/android/.gradle
+mobile/android/build
+mobile/ios/build
+mobile.bak.1756164604
 control
 Deployments.md
 *.log

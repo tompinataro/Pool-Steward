@@ -10,7 +10,7 @@
     "updates": {},
     "ios": {
       "bundleIdentifier": "com.tixpy.poolsteward",
-      "buildNumber": "8"
+      "buildNumber": "9"
     },
     "android": {
       "package": "com.tixpy.poolsteward",

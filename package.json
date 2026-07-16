@@ -59,6 +59,8 @@
     "client": "vite",
     "server": "node dist/server/server.js",
     "build": "tsc && cp -R server/sql dist/server/ && cp -R server/modules dist/server/",
+    "build:web": "vite build",
+    "build:web:github": "EXPO_PUBLIC_API_URL=https://routemaster-api-e56a09ed4264.herokuapp.com vite build --base=/Pool-Steward/app/ --outDir docs/app --emptyOutDir",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
     "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
